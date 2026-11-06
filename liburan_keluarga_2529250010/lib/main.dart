@@ -24,6 +24,20 @@ class MainScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const Padding(
+                padding : EdgeInsets.fromLTRB(16,22,16,10),
+                child: Text(
+                  'Taman Bunga Celosia',
+                  style: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 44, 184, 97),
+                ),
+
+                ),
+              ),
+
+
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.network(
@@ -125,8 +139,17 @@ class MainScreen extends StatelessWidget {
 
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton.icon()
-              )
+                child: ElevatedButton.icon(
+                  onPressed:(){},
+                  icon: const Icon(Icons.menu_book),
+                  label: const Text('Rencanakan Kunjungan'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 25, 102, 48),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.all(14),
+                  ),
+                ),
+              ),
 
 
               const SizedBox(height: 24),
